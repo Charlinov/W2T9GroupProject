@@ -1,25 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Tilemaps;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class TileManager : MonoBehaviour
+public class BeeTracker : MonoBehaviour
 {
-    Tilemap tilemap;
+    public PlayerController player;
+
     // Start is called before the first frame update
     void Start()
     {
-        tilemap = GetComponent<Tilemap>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void Harvest(Vector3Int position)
-    {
-        
+        GetComponent<Text>().text = player.bees.ToString();
     }
 }
